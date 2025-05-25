@@ -14,7 +14,6 @@ import globalCss from "../styles/global.css"
   </head>
   <body>
     <div id="container">
-      <img id="background" src="/background.svg" alt="" fetchpriority="high" />
       <main>
         <slot />
       </main>
@@ -29,16 +28,10 @@ import globalCss from "../styles/global.css"
     width: 100%;
     height: 100%;
     background-color: #ffb053;
-  }
-
-  #background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    filter: blur(100px);
+    /* background-image: url("/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
   }
 
   #container {
@@ -50,10 +43,5 @@ import globalCss from "../styles/global.css"
     height: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin-top: 0.25em;
   }
 </style>
